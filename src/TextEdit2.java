@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class TextEditOrign{
+public class TextEdit2{
 
     public static void main(String[] args){
 
@@ -24,7 +24,7 @@ public class TextEditOrign{
                 // 置換処理
                 StringBuilder sb = new StringBuilder();
                 sb.append(line);
-                sb.replace(0, 2, "AA");
+                sb.replace(4, 6, "BB"); // 年齢を全て変更する
                 line = sb.toString();
                 // ファイルへ書き込み
                 bw.write(line);

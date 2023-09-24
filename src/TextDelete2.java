@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class TextEdit {
+public class TextDelete2 {
 
     public static void main(String[] args) {
 
@@ -21,13 +21,16 @@ public class TextEdit {
                     new FileOutputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample2.txt"), "UTF8"));
 
             String line;
-            while ((line = br.readLine()) != null) {
 
-                // 置換処理
-                line = line.replace("AA", "ZZ");    //全ての値に対してAAをZZに変更する
-                // ファイルへ書き込み
-                bw.write(line);
-                bw.newLine();
+            for (int i = 0; i >= 0; i++) {
+                line = br.readLine();
+                if (line == null) {
+                    break;
+                }
+                if (i != 1) { // 2行目のレコード削除する。
+                    bw.write(line);
+                    bw.newLine();
+                }
             }
 
         } catch (IOException e) {
@@ -46,6 +49,7 @@ public class TextEdit {
                 }
             }
         }
+
         try {
             // ファイル入出力（MS932からUTF8へ変換）
             br = new BufferedReader(new InputStreamReader(

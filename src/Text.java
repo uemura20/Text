@@ -96,7 +96,8 @@ public class Text {
                 List<List<String>> lists = Arrays.asList(
                         Arrays.asList(name, age, gender, tel));
 
-                pw.println(lists.get(0).get(0) + ", " +lists.get(0).get(1) + ", " + lists.get(0).get(2) + ", " + lists.get(0).get(3) );
+                pw.println(lists.get(0).get(0) + ", " + lists.get(0).get(1) + ", " + lists.get(0).get(2) + ", "
+                        + lists.get(0).get(3));
                 //氏名, 年齢, 性別, 電話番号
                 //pw.println(lists);
                 //[[氏名, 年齢、性別、電話番号]]
