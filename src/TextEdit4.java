@@ -14,9 +14,8 @@ public class TextEdit4 {
         BufferedWriter bw = null;
 
         try {
-            // ファイル入出力（MS932からUTF8へ変換）
             br = new BufferedReader(new InputStreamReader(
-                    new FileInputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample.txt"), "MS932"));
+                    new FileInputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample.txt"), "UTF8"));
             bw = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample2.txt"), "UTF8"));
 
@@ -27,13 +26,13 @@ public class TextEdit4 {
                 if (line == null) {
                     break;
                 }
-                if (i != 4) {   // 5行目の
+                if (i != 1) {   // 5行目の
                     bw.write(line);
                     bw.newLine();
                 } else {
                     StringBuilder sb = new StringBuilder();
                     sb.append(line);
-                    sb.replace(0, 2, "KK"); // KKで変更する。
+                    sb.replace(0, 2, "成田"); // KKで変更する。
                     line = sb.toString();
                     // ファイルへ書き込み
                     bw.write(line);

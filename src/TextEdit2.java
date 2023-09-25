@@ -15,7 +15,7 @@ public class TextEdit2{
 
         try{
             // ファイル入出力（MS932からUTF8へ変換）
-            br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample.txt"), "MS932"));
+            br = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample.txt"), "UTF8"));
             bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\Users\\CHO YEONGHYEON\\Desktop\\TextFileSystem\\sample2.txt"), "UTF8"));
 
             String line;
